@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		22A7AD211BACC1A800C8AA76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD201BACC1A800C8AA76 /* AppDelegate.swift */; };
-		22A7AD231BACC1A800C8AA76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD221BACC1A800C8AA76 /* ViewController.swift */; };
 		22A7AD261BACC1A800C8AA76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A7AD241BACC1A800C8AA76 /* Main.storyboard */; };
 		22A7AD281BACC1A800C8AA76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A7AD271BACC1A800C8AA76 /* Assets.xcassets */; };
 		22A7AD2B1BACC1A800C8AA76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A7AD291BACC1A800C8AA76 /* LaunchScreen.storyboard */; };
 		22A7AD361BACC1A800C8AA76 /* Hamburger_Menu_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD351BACC1A800C8AA76 /* Hamburger_Menu_DemoTests.swift */; };
 		22A7AD411BACC1A800C8AA76 /* Hamburger_Menu_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD401BACC1A800C8AA76 /* Hamburger_Menu_DemoUITests.swift */; };
+		22A7AD501BACC26100C8AA76 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD4F1BACC26100C8AA76 /* HamburgerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22A7AD521BACC26800C8AA76 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD511BACC26800C8AA76 /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22A7AD541BACC27A00C8AA76 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD531BACC27A00C8AA76 /* GreenViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22A7AD561BACC27F00C8AA76 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD551BACC27F00C8AA76 /* BlueViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22A7AD581BACC28800C8AA76 /* PinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A7AD571BACC28800C8AA76 /* PinkViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		22F6BEA71BADCCF900DC458D /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6BEA61BADCCF900DC458D /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		22A7AD1D1BACC1A800C8AA76 /* Hamburger Menu Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hamburger Menu Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A7AD201BACC1A800C8AA76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22A7AD221BACC1A800C8AA76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22A7AD251BACC1A800C8AA76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22A7AD271BACC1A800C8AA76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22A7AD2A1BACC1A800C8AA76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		22A7AD3C1BACC1A800C8AA76 /* Hamburger Menu DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hamburger Menu DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A7AD401BACC1A800C8AA76 /* Hamburger_Menu_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hamburger_Menu_DemoUITests.swift; sourceTree = "<group>"; };
 		22A7AD421BACC1A800C8AA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A7AD4F1BACC26100C8AA76 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
+		22A7AD511BACC26800C8AA76 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		22A7AD531BACC27A00C8AA76 /* GreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		22A7AD551BACC27F00C8AA76 /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		22A7AD571BACC28800C8AA76 /* PinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkViewController.swift; sourceTree = "<group>"; };
+		22F6BEA61BADCCF900DC458D /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +107,9 @@
 		22A7AD1F1BACC1A800C8AA76 /* Hamburger Menu Demo */ = {
 			isa = PBXGroup;
 			children = (
+				22F6BEA51BADCCDF00DC458D /* Views */,
+				22A7AD4E1BACC22500C8AA76 /* View Controllers */,
 				22A7AD201BACC1A800C8AA76 /* AppDelegate.swift */,
-				22A7AD221BACC1A800C8AA76 /* ViewController.swift */,
 				22A7AD241BACC1A800C8AA76 /* Main.storyboard */,
 				22A7AD271BACC1A800C8AA76 /* Assets.xcassets */,
 				22A7AD291BACC1A800C8AA76 /* LaunchScreen.storyboard */,
@@ -123,6 +134,26 @@
 				22A7AD421BACC1A800C8AA76 /* Info.plist */,
 			);
 			path = "Hamburger Menu DemoUITests";
+			sourceTree = "<group>";
+		};
+		22A7AD4E1BACC22500C8AA76 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22A7AD4F1BACC26100C8AA76 /* HamburgerViewController.swift */,
+				22A7AD511BACC26800C8AA76 /* MenuViewController.swift */,
+				22A7AD531BACC27A00C8AA76 /* GreenViewController.swift */,
+				22A7AD551BACC27F00C8AA76 /* BlueViewController.swift */,
+				22A7AD571BACC28800C8AA76 /* PinkViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		22F6BEA51BADCCDF00DC458D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22F6BEA61BADCCF900DC458D /* MenuCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A7AD231BACC1A800C8AA76 /* ViewController.swift in Sources */,
+				22F6BEA71BADCCF900DC458D /* MenuCell.swift in Sources */,
+				22A7AD581BACC28800C8AA76 /* PinkViewController.swift in Sources */,
+				22A7AD541BACC27A00C8AA76 /* GreenViewController.swift in Sources */,
+				22A7AD501BACC26100C8AA76 /* HamburgerViewController.swift in Sources */,
+				22A7AD521BACC26800C8AA76 /* MenuViewController.swift in Sources */,
+				22A7AD561BACC27F00C8AA76 /* BlueViewController.swift in Sources */,
 				22A7AD211BACC1A800C8AA76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +517,7 @@
 				22A7AD471BACC1A800C8AA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22A7AD481BACC1A800C8AA76 /* Build configuration list for PBXNativeTarget "Hamburger Menu DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +526,7 @@
 				22A7AD4A1BACC1A800C8AA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22A7AD4B1BACC1A800C8AA76 /* Build configuration list for PBXNativeTarget "Hamburger Menu DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +535,7 @@
 				22A7AD4D1BACC1A800C8AA76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
