@@ -9,47 +9,45 @@
 import UIKit
 
 class HamburgerViewController: UIViewController {
-
-    @IBOutlet weak var leftConstraint: NSLayoutConstraint!
-    var initialLeftMargin: CGFloat!
     
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var contentView: UIView!
     
-    var menuViewController: UIViewController? {
+    @IBOutlet weak var leftMarginConstraint: NSLayoutConstraint!
+    var originalLeftMargin: CGFloat!
+    
+    var menuViewController: UIViewController! {
         didSet(oldMenuViewController) {
-//            if menuViewController != nil {
-//                menuViewController!.willMoveToParentViewController(nil)
-//                menuViewController!.view.removeFromSuperview()
-//                menuViewController!.removeFromParentViewController()
-//            }
-//            
-//            if newMenuViewController != nil {
-//                newMenuViewController!.willMoveToParentViewController(self)
-//                menuView.addSubview(newMenuViewController!.view)
-//                newMenuViewController!.view.frame = menuView.bounds
-//                newMenuViewController!.didMoveToParentViewController(self)
-//            }
-            
             view.layoutIfNeeded()
             
-            // Simple version
-            menuView.addSubview(menuViewController!.view)
-            menuViewController!.view.frame = menuView.bounds
+            if oldMenuViewController != nil {
+                oldMenuViewController.willMoveToParentViewController(nil)
+                oldMenuViewController.view.removeFromSuperview()
+                oldMenuViewController.didMoveToParentViewController(nil)
+            }
+            
+            menuView.addSubview(menuViewController.view)
         }
     }
     
-    var contentViewController: UIViewController? {
-        didSet {
-            contentViewController!.view.frame = contentView.bounds
-            contentView.addSubview(contentViewController!.view)
-            contentView.layoutIfNeeded()
+    var contentViewController: UIViewController! {
+        didSet(oldContentViewController) {
+            view.layoutIfNeeded()
             
-            UIView.animateWithDuration(0.3) { () -> Void in
-                self.leftConstraint.constant = 0
-                self.view.layoutIfNeeded()
+            if oldContentViewController != nil {
+                oldContentViewController.willMoveToParentViewController(nil)
+                oldContentViewController.view.removeFromSuperview()
+                oldContentViewController.didMoveToParentViewController(nil)
             }
             
+            contentViewController.willMoveToParentViewController(self)
+            contentView.addSubview(contentViewController.view)
+            contentViewController.didMoveToParentViewController(self)
+            
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.leftMarginConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
@@ -58,7 +56,7 @@ class HamburgerViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,15 +67,16 @@ class HamburgerViewController: UIViewController {
         let velocity = sender.velocityInView(view)
         
         if sender.state == UIGestureRecognizerState.Began {
-            initialLeftMargin = leftConstraint.constant
+            originalLeftMargin = leftMarginConstraint.constant
         } else if sender.state == UIGestureRecognizerState.Changed {
-            leftConstraint.constant = initialLeftMargin + translation.x
+            leftMarginConstraint.constant = originalLeftMargin + translation.x
         } else if sender.state == UIGestureRecognizerState.Ended {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            
+            UIView.animateWithDuration(0.3, animations: {
                 if velocity.x > 0 {
-                    self.leftConstraint.constant = self.view.frame.size.width - 50
+                    self.leftMarginConstraint.constant = self.view.frame.size.width - 50
                 } else {
-                    self.leftConstraint.constant = 0
+                    self.leftMarginConstraint.constant = 0
                 }
                 self.view.layoutIfNeeded()
             })
@@ -86,12 +85,12 @@ class HamburgerViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
