@@ -43,7 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="Bdj-ex-xji" id="n4d-R8-Wbk"/>
-                        <outlet property="leftConstraint" destination="dW1-rC-KTB" id="cLY-86-VwO"/>
+                        <outlet property="leftMarginConstraint" destination="dW1-rC-KTB" id="h6A-zd-jbF"/>
                         <outlet property="menuView" destination="KD0-e5-bSX" id="2fn-Xy-VRi"/>
                     </connections>
                 </viewController>
